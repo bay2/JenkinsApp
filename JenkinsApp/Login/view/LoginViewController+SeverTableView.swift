@@ -23,7 +23,7 @@ extension LoginViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("ServerCell") as! ServerTableViewCell
         
-        cell.serverNameLab.text = serverInfos[indexPath.row].serverName
+        cell.serverNameLab.text = serverManage.serverInfos[indexPath.row].serverName
         cell.layoutMargins = UIEdgeInsetsZero
         
         return cell
@@ -51,7 +51,7 @@ extension LoginViewController {
      - returns: 个数
      */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return serverInfos.count
+        return serverManage.serverInfos.count
     }
     
     /**
@@ -62,24 +62,12 @@ extension LoginViewController {
      */
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
         expandServerList()
-        serverLab.text = serverInfos[indexPath.row].serverName
         
-        let serverInfo = realm.objects(ServerData).filter("isSelected == true")
+        serverLab.text = serverManage.serverInfos[indexPath.row].serverName
         
-        realm.beginWrite()
-        if serverInfo.count != 0 {
-            
-            try! realm.write { () -> Void in
-                //            serverInfo.first?.setValue(true, forKeyPath: "isFirst")
-                serverInfo.setValue(false, forKey: "isSelected")
-            }
-        }
-        
-        try! realm.write({ () -> Void in
-            
-        })
-        try! realm.commitWrite()
+        serverManage.setSelectedServer(serverManage.serverInfos[indexPath.row])
 
     }
     

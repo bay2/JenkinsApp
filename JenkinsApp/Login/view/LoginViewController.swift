@@ -22,13 +22,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var serverTableViewTopLine: UIView!
     @IBOutlet weak var serverTableView: UITableView!
     @IBOutlet weak var addServerView: UIView!
+    var notificationToken: NotificationToken?
+    
+    var serverManage = ServerDataManage()
     
     var isExpand = false
-    
-    let serverInfos = try! Realm().objects(ServerData)
-    let realm = try! Realm()
-    
-    var notificationToken : NotificationToken?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +37,13 @@ class LoginViewController: UIViewController {
         serverTableView.tableFooterView = UIView()
         serverTableView.tableHeaderView = UIView()
         
-        notificationToken = realm.addNotificationBlock({ (notification, realm) -> Void in
+        if let serverName = serverManage.querySelectedServerInfo()?.serverName {
+            serverLab.text = serverName
+        }
+        
+        notificationToken = serverManage.realm.addNotificationBlock { (notification, realm) -> Void in
             self.serverTableView.reloadData()
-        })
+        }
         
     }
 
@@ -145,17 +147,18 @@ class LoginViewController: UIViewController {
                 return
             }
             
-            let retServers = self.realm.objects(ServerData).filter("serverName == '\(serverName.text!)'")
             
-            if retServers.isEmpty == false {
+            if self.serverManage.isExistServer(serverName.text!) == true {
                 alert = SCLAlertView()
                 alert.showError("添加失败", subTitle: "服务器名已存在")
                 return
             }
             
-            self.realm.beginWrite()
-            self.realm.add(serverInfo)
-            try! self.realm.commitWrite()
+            if self.serverManage.addServerInfo(serverInfo) != true {
+                alert = SCLAlertView()
+                alert.showError("添加失败", subTitle: "数据添加异常")
+                return
+            }
             
         }
         
