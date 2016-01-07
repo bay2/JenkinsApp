@@ -180,6 +180,9 @@
                                     <constraint firstAttribute="height" constant="30" id="gCV-7W-WLz"/>
                                 </constraints>
                                 <state key="normal" title="登录"/>
+                                <connections>
+                                    <action selector="onClickLogin:" destination="RoP-4E-4f7" eventType="touchUpInside" id="mMP-Q6-Fbz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>

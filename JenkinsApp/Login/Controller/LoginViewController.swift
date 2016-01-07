@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
     var notificationToken: NotificationToken?
     
     var serverManage = ServerDataManage()
+    var jenkinsReq = JenkinsNetRequest()
     
     var isExpand = false
     
@@ -163,6 +164,13 @@ class LoginViewController: UIViewController {
         }
         
         alert.showEdit("添加服务器", subTitle: "请输入你的服务器信息")
+        
+    }
+    
+    @IBAction func onClickLogin(sender: UIButton) {
+        
+        jenkinsReq.loginReq(userNameText.text!, pwd: pwdText.text!)
+        
         
     }
     /*
