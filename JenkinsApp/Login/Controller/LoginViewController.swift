@@ -10,6 +10,7 @@ import UIKit
 import SCLAlertView
 import Log
 import RealmSwift
+import Alamofire
 
 class LoginViewController: UIViewController {
 
@@ -26,6 +27,7 @@ class LoginViewController: UIViewController {
     
     var serverManage = ServerDataManage()
     var jenkinsReq = JenkinsNetRequest()
+    var loginResponse: LoginResponse?
     
     var isExpand = false
     
@@ -38,16 +40,33 @@ class LoginViewController: UIViewController {
         serverTableView.tableFooterView = UIView()
         serverTableView.tableHeaderView = UIView()
         
-        if let serverName = serverManage.querySelectedServerInfo()?.serverName {
-            serverLab.text = serverName
+        if let serverData = serverManage.querySelectedServerInfo() {
+            serverLab.text = serverData.serverName
+            jenkinsReq.serverAddr = serverData.serverAddr
         }
         
         notificationToken = serverManage.realm.addNotificationBlock { (notification, realm) -> Void in
             self.serverTableView.reloadData()
         }
         
+        jenkinsReq.postNotification = jenkinsPostNoticication
+        
     }
-
+    
+    func jenkinsPostNoticication(method: JenkinsMethod, result: Result<AnyObject, JenkinsError>) {
+        
+        if method != .Login {
+            return;
+        }
+        
+        if result.isFailure {
+            return;
+        }
+        
+        loginResponse = result.value as? LoginResponse
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -169,7 +188,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func onClickLogin(sender: UIButton) {
         
-        jenkinsReq.loginReq(userNameText.text!, pwd: pwdText.text!)
+        jenkinsReq.httpPost(.Login, para: ["user" : userNameText.text!, "pwd": pwdText.text!])
         
         
     }

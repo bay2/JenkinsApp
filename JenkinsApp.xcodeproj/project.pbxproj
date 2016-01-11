@@ -18,6 +18,7 @@
 		91AF467B1C37996700D10AEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91AF46791C37996700D10AEA /* LaunchScreen.storyboard */; };
 		91AF46861C37996700D10AEA /* JenkinsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF46851C37996700D10AEA /* JenkinsAppTests.swift */; };
 		91AF46911C37996700D10AEA /* JenkinsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF46901C37996700D10AEA /* JenkinsAppUITests.swift */; };
+		91EFA7BE1C42287400B11B83 /* JenkinsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFA7BD1C42287400B11B83 /* JenkinsJSON.swift */; };
 		EACC32612343B929DB70ECB9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F1D3702EDA96AC1CD648E1 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		91AF468C1C37996700D10AEA /* JenkinsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JenkinsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91AF46901C37996700D10AEA /* JenkinsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JenkinsAppUITests.swift; sourceTree = "<group>"; };
 		91AF46921C37996700D10AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91EFA7BD1C42287400B11B83 /* JenkinsJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JenkinsJSON.swift; sourceTree = "<group>"; };
 		A168F854CF203D085EE2F34D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AEEC9BCA67DA122CD2AC2ADC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +122,7 @@
 				914B43961C3E8A4E00A5A236 /* ServerData.swift */,
 				914B43971C3E8A4E00A5A236 /* ServerDataManage.swift */,
 				914B439F1C3E90AF00A5A236 /* JenkinsNetRequest.swift */,
+				91EFA7BD1C42287400B11B83 /* JenkinsJSON.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				914B439D1C3E8A4E00A5A236 /* ServerDataManage.swift in Sources */,
 				914B439B1C3E8A4E00A5A236 /* LoginViewController.swift in Sources */,
 				914B43A01C3E90AF00A5A236 /* JenkinsNetRequest.swift in Sources */,
+				91EFA7BE1C42287400B11B83 /* JenkinsJSON.swift in Sources */,
 				914B439A1C3E8A4E00A5A236 /* LoginViewController+SeverTableView.swift in Sources */,
 				91AF46711C37996700D10AEA /* AppDelegate.swift in Sources */,
 			);
