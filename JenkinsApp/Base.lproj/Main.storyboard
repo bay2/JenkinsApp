@@ -227,7 +227,7 @@
                                 <rect key="frame" x="0.0" y="45" width="600" height="555"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="68" id="f7t-rh-75N">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JobTableViewCell" rowHeight="68" id="f7t-rh-75N" customClass="JobTableViewCell" customModule="JenkinsApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f7t-rh-75N" id="Ctt-EZ-8go">
@@ -262,6 +262,9 @@
                                                 <constraint firstItem="hCT-Ar-AKg" firstAttribute="leading" secondItem="Ctt-EZ-8go" secondAttribute="leading" id="tS7-8E-Wu8"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="jobNameLab" destination="Y6P-s6-d8X" id="kdW-2C-F4o"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

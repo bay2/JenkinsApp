@@ -62,8 +62,7 @@ class JenkinsNetRequest: NSObject {
             return
         }
         
-        Alamofire.request(.POST, serverNetAddr + "/j_acegi_security_check", parameters: ["j_username" : user, "j_password" : pwd, "from" : "/api/json?pretty=true"]).responseJSON { (response) -> Void in
-            
+        Alamofire.request(.POST, serverNetAddr + "/j_acegi_security_check", parameters: ["j_username" : user, "j_password" : pwd, "from" : "/api/json?pretty=true"]).responseObject { (response: Response<LoginResponse, NSError>) -> Void in
             if response.result.isFailure {
                 self.cellPostNotification(.Login, result: .Failure(.NetError))
                 Log.error("Network Invalid")
@@ -83,6 +82,28 @@ class JenkinsNetRequest: NSObject {
             })
             
         }
+//        
+//        Alamofire.request(.POST, serverNetAddr + "/j_acegi_security_check", parameters: ["j_username" : user, "j_password" : pwd, "from" : "/api/json?pretty=true"]).responseJSON { (response) -> Void in
+//            
+//            if response.result.isFailure {
+//                self.cellPostNotification(.Login, result: .Failure(.NetError))
+//                Log.error("Network Invalid")
+//                return
+//            }
+//            
+//            guard let loginResponse = response.result.value else {
+//                self.cellPostNotification(.Login, result: .Failure(.NetApiError))
+//                Log.error("Network Api Error")
+//                return
+//            }
+//            
+//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                
+//                self.cellPostNotification(.Login, result: .Success(loginResponse))
+//                
+//            })
+//            
+//        }
     }
     
     /*!

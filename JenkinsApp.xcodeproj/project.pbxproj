@@ -21,6 +21,7 @@
 		91C3AE401C45428C006B67AF /* ServerDataManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3AE381C45428C006B67AF /* ServerDataManage.swift */; };
 		91C3AE431C4543E8006B67AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C3AE411C4543E8006B67AF /* Main.storyboard */; };
 		91C3AE451C45476B006B67AF /* MasterViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3AE441C45476B006B67AF /* MasterViewController+TableView.swift */; };
+		91C3AE541C469DE6006B67AF /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3AE531C469DE6006B67AF /* JobTableViewCell.swift */; };
 		EACC32612343B929DB70ECB9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F1D3702EDA96AC1CD648E1 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		91C3AE381C45428C006B67AF /* ServerDataManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerDataManage.swift; sourceTree = "<group>"; };
 		91C3AE421C4543E8006B67AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = JenkinsApp/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		91C3AE441C45476B006B67AF /* MasterViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MasterViewController+TableView.swift"; sourceTree = "<group>"; };
+		91C3AE531C469DE6006B67AF /* JobTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		A168F854CF203D085EE2F34D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AEEC9BCA67DA122CD2AC2ADC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				91C3AE411C4543E8006B67AF /* Main.storyboard */,
+				91C3AE531C469DE6006B67AF /* JobTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				91C3AE3B1C45428C006B67AF /* LoginViewController.swift in Sources */,
 				91C3AE3A1C45428C006B67AF /* LoginViewController+SeverTableView.swift in Sources */,
 				91AF46711C37996700D10AEA /* AppDelegate.swift in Sources */,
+				91C3AE541C469DE6006B67AF /* JobTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

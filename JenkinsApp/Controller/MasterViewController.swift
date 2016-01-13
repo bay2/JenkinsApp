@@ -9,6 +9,9 @@
 import UIKit
 
 class MasterViewController: UIViewController {
+    
+    
+    var jobData: LoginResponse?
 
     override func viewDidLoad() {
         super.viewDidLoad()
