@@ -211,10 +211,10 @@
             </objects>
             <point key="canvasLocation" x="435" y="349"/>
         </scene>
-        <!--View Controller-->
+        <!--Master View Controller-->
         <scene sceneID="6SC-MI-KAq">
             <objects>
-                <viewController id="KKs-vL-ioW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MasterViewController" id="KKs-vL-ioW" customClass="MasterViewController" customModule="JenkinsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MOl-cV-2gR"/>
                         <viewControllerLayoutGuide type="bottom" id="aE9-Mg-86l"/>
@@ -247,17 +247,27 @@
                                                     <color key="textColor" red="0.21960784310000001" green="0.59999999999999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7P-oP-LKy">
+                                                    <rect key="frame" x="545" y="19" width="30" height="30"/>
+                                                    <state key="normal" title="构建"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Y6P-s6-d8X" firstAttribute="centerY" secondItem="Ctt-EZ-8go" secondAttribute="centerY" id="2n7-G6-xjU"/>
                                                 <constraint firstAttribute="bottom" secondItem="hCT-Ar-AKg" secondAttribute="bottom" id="37Y-qy-Gal"/>
                                                 <constraint firstItem="Y6P-s6-d8X" firstAttribute="leading" secondItem="hCT-Ar-AKg" secondAttribute="trailing" constant="10" id="Bxa-Ii-KhX"/>
                                                 <constraint firstItem="hCT-Ar-AKg" firstAttribute="top" secondItem="Ctt-EZ-8go" secondAttribute="top" id="FTj-Md-5uK"/>
+                                                <constraint firstAttribute="trailing" secondItem="t7P-oP-LKy" secondAttribute="trailing" constant="25" id="TjE-DS-mBY"/>
+                                                <constraint firstItem="t7P-oP-LKy" firstAttribute="centerY" secondItem="Ctt-EZ-8go" secondAttribute="centerY" id="loD-Qr-GQy"/>
                                                 <constraint firstItem="hCT-Ar-AKg" firstAttribute="leading" secondItem="Ctt-EZ-8go" secondAttribute="leading" id="tS7-8E-Wu8"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="KKs-vL-ioW" id="Eoa-an-h77"/>
+                                    <outlet property="delegate" destination="KKs-vL-ioW" id="Yaa-RX-0A6"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>

@@ -11,6 +11,7 @@ import SCLAlertView
 import Log
 import RealmSwift
 import Alamofire
+import EZSwiftExtensions
 
 class LoginViewController: UIViewController {
 
@@ -65,6 +66,9 @@ class LoginViewController: UIViewController {
         
         loginResponse = result.value as? LoginResponse
         
+        let masterVC  = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MasterViewController")
+        
+        self.presentVC(masterVC)
     }
     
     override func didReceiveMemoryWarning() {

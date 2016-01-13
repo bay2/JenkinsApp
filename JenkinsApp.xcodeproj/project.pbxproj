@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		914B439A1C3E8A4E00A5A236 /* LoginViewController+SeverTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914B43931C3E8A4E00A5A236 /* LoginViewController+SeverTableView.swift */; };
-		914B439B1C3E8A4E00A5A236 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914B43941C3E8A4E00A5A236 /* LoginViewController.swift */; };
-		914B439C1C3E8A4E00A5A236 /* ServerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914B43961C3E8A4E00A5A236 /* ServerData.swift */; };
-		914B439D1C3E8A4E00A5A236 /* ServerDataManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914B43971C3E8A4E00A5A236 /* ServerDataManage.swift */; };
-		914B43A01C3E90AF00A5A236 /* JenkinsNetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914B439F1C3E90AF00A5A236 /* JenkinsNetRequest.swift */; };
 		91AF46711C37996700D10AEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF46701C37996700D10AEA /* AppDelegate.swift */; };
-		91AF46761C37996700D10AEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91AF46741C37996700D10AEA /* Main.storyboard */; };
 		91AF46781C37996700D10AEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91AF46771C37996700D10AEA /* Assets.xcassets */; };
 		91AF467B1C37996700D10AEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91AF46791C37996700D10AEA /* LaunchScreen.storyboard */; };
 		91AF46861C37996700D10AEA /* JenkinsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF46851C37996700D10AEA /* JenkinsAppTests.swift */; };
 		91AF46911C37996700D10AEA /* JenkinsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF46901C37996700D10AEA /* JenkinsAppUITests.swift */; };
-		91EFA7BE1C42287400B11B83 /* JenkinsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFA7BD1C42287400B11B83 /* JenkinsJSON.swift */; };
+		91C3AE3A1C45428C006B67AF /* LoginViewController+SeverTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3AE311C45428C006B67AF /* LoginViewController+SeverTableView.swift */; };
+		91C3AE3B1C45428C006B67AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3AE321C45428C006B67AF /* LoginViewController.swift */; };
+		91C3AE3C1C45428C006B67AF /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3AE331C45428C006B67AF /* MasterViewController.swift */; };
+		91C3AE3D1C45428C006B67AF /* JenkinsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3AE351C45428C006B67AF /* JenkinsJSON.swift */; };
+		91C3AE3E1C45428C006B67AF /* JenkinsNetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3AE361C45428C006B67AF /* JenkinsNetRequest.swift */; };
+		91C3AE3F1C45428C006B67AF /* ServerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3AE371C45428C006B67AF /* ServerData.swift */; };
+		91C3AE401C45428C006B67AF /* ServerDataManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3AE381C45428C006B67AF /* ServerDataManage.swift */; };
+		91C3AE431C4543E8006B67AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C3AE411C4543E8006B67AF /* Main.storyboard */; };
+		91C3AE451C45476B006B67AF /* MasterViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3AE441C45476B006B67AF /* MasterViewController+TableView.swift */; };
 		EACC32612343B929DB70ECB9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F1D3702EDA96AC1CD648E1 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,14 +43,8 @@
 
 /* Begin PBXFileReference section */
 		65F1D3702EDA96AC1CD648E1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		914B43931C3E8A4E00A5A236 /* LoginViewController+SeverTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+SeverTableView.swift"; sourceTree = "<group>"; };
-		914B43941C3E8A4E00A5A236 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		914B43961C3E8A4E00A5A236 /* ServerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerData.swift; sourceTree = "<group>"; };
-		914B43971C3E8A4E00A5A236 /* ServerDataManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerDataManage.swift; sourceTree = "<group>"; };
-		914B439F1C3E90AF00A5A236 /* JenkinsNetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JenkinsNetRequest.swift; sourceTree = "<group>"; };
 		91AF466D1C37996700D10AEA /* JenkinsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JenkinsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91AF46701C37996700D10AEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		91AF46751C37996700D10AEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91AF46771C37996700D10AEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91AF467A1C37996700D10AEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91AF467C1C37996700D10AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,7 +54,15 @@
 		91AF468C1C37996700D10AEA /* JenkinsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JenkinsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91AF46901C37996700D10AEA /* JenkinsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JenkinsAppUITests.swift; sourceTree = "<group>"; };
 		91AF46921C37996700D10AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91EFA7BD1C42287400B11B83 /* JenkinsJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JenkinsJSON.swift; sourceTree = "<group>"; };
+		91C3AE311C45428C006B67AF /* LoginViewController+SeverTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+SeverTableView.swift"; sourceTree = "<group>"; };
+		91C3AE321C45428C006B67AF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		91C3AE331C45428C006B67AF /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		91C3AE351C45428C006B67AF /* JenkinsJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JenkinsJSON.swift; sourceTree = "<group>"; };
+		91C3AE361C45428C006B67AF /* JenkinsNetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JenkinsNetRequest.swift; sourceTree = "<group>"; };
+		91C3AE371C45428C006B67AF /* ServerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerData.swift; sourceTree = "<group>"; };
+		91C3AE381C45428C006B67AF /* ServerDataManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerDataManage.swift; sourceTree = "<group>"; };
+		91C3AE421C4543E8006B67AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = JenkinsApp/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		91C3AE441C45476B006B67AF /* MasterViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MasterViewController+TableView.swift"; sourceTree = "<group>"; };
 		A168F854CF203D085EE2F34D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AEEC9BCA67DA122CD2AC2ADC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,43 +101,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		914B43841C3E8A3000A5A236 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				914B43921C3E8A4E00A5A236 /* Controller */,
-				914B43951C3E8A4E00A5A236 /* Model */,
-				914B43981C3E8A4E00A5A236 /* View */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		914B43921C3E8A4E00A5A236 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				914B43931C3E8A4E00A5A236 /* LoginViewController+SeverTableView.swift */,
-				914B43941C3E8A4E00A5A236 /* LoginViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		914B43951C3E8A4E00A5A236 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				914B43961C3E8A4E00A5A236 /* ServerData.swift */,
-				914B43971C3E8A4E00A5A236 /* ServerDataManage.swift */,
-				914B439F1C3E90AF00A5A236 /* JenkinsNetRequest.swift */,
-				91EFA7BD1C42287400B11B83 /* JenkinsJSON.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		914B43981C3E8A4E00A5A236 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		91AF46641C37996700D10AEA = {
 			isa = PBXGroup;
 			children = (
@@ -159,9 +126,10 @@
 		91AF466F1C37996700D10AEA /* JenkinsApp */ = {
 			isa = PBXGroup;
 			children = (
-				914B43841C3E8A3000A5A236 /* Login */,
+				91C3AE301C45428C006B67AF /* Controller */,
+				91C3AE341C45428C006B67AF /* Model */,
+				91C3AE391C45428C006B67AF /* View */,
 				91AF46701C37996700D10AEA /* AppDelegate.swift */,
-				91AF46741C37996700D10AEA /* Main.storyboard */,
 				91AF46771C37996700D10AEA /* Assets.xcassets */,
 				91AF46791C37996700D10AEA /* LaunchScreen.storyboard */,
 				91AF467C1C37996700D10AEA /* Info.plist */,
@@ -185,6 +153,36 @@
 				91AF46921C37996700D10AEA /* Info.plist */,
 			);
 			path = JenkinsAppUITests;
+			sourceTree = "<group>";
+		};
+		91C3AE301C45428C006B67AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				91C3AE311C45428C006B67AF /* LoginViewController+SeverTableView.swift */,
+				91C3AE321C45428C006B67AF /* LoginViewController.swift */,
+				91C3AE331C45428C006B67AF /* MasterViewController.swift */,
+				91C3AE441C45476B006B67AF /* MasterViewController+TableView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		91C3AE341C45428C006B67AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				91C3AE351C45428C006B67AF /* JenkinsJSON.swift */,
+				91C3AE361C45428C006B67AF /* JenkinsNetRequest.swift */,
+				91C3AE371C45428C006B67AF /* ServerData.swift */,
+				91C3AE381C45428C006B67AF /* ServerDataManage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		91C3AE391C45428C006B67AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91C3AE411C4543E8006B67AF /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C4E794DDACB494C9C2A4DC96 /* Pods */ = {
@@ -303,9 +301,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91C3AE431C4543E8006B67AF /* Main.storyboard in Resources */,
 				91AF467B1C37996700D10AEA /* LaunchScreen.storyboard in Resources */,
 				91AF46781C37996700D10AEA /* Assets.xcassets in Resources */,
-				91AF46761C37996700D10AEA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,12 +376,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				914B439C1C3E8A4E00A5A236 /* ServerData.swift in Sources */,
-				914B439D1C3E8A4E00A5A236 /* ServerDataManage.swift in Sources */,
-				914B439B1C3E8A4E00A5A236 /* LoginViewController.swift in Sources */,
-				914B43A01C3E90AF00A5A236 /* JenkinsNetRequest.swift in Sources */,
-				91EFA7BE1C42287400B11B83 /* JenkinsJSON.swift in Sources */,
-				914B439A1C3E8A4E00A5A236 /* LoginViewController+SeverTableView.swift in Sources */,
+				91C3AE3D1C45428C006B67AF /* JenkinsJSON.swift in Sources */,
+				91C3AE3C1C45428C006B67AF /* MasterViewController.swift in Sources */,
+				91C3AE451C45476B006B67AF /* MasterViewController+TableView.swift in Sources */,
+				91C3AE3F1C45428C006B67AF /* ServerData.swift in Sources */,
+				91C3AE401C45428C006B67AF /* ServerDataManage.swift in Sources */,
+				91C3AE3E1C45428C006B67AF /* JenkinsNetRequest.swift in Sources */,
+				91C3AE3B1C45428C006B67AF /* LoginViewController.swift in Sources */,
+				91C3AE3A1C45428C006B67AF /* LoginViewController+SeverTableView.swift in Sources */,
 				91AF46711C37996700D10AEA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,20 +420,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		91AF46741C37996700D10AEA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				91AF46751C37996700D10AEA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		91AF46791C37996700D10AEA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				91AF467A1C37996700D10AEA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		91C3AE411C4543E8006B67AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91C3AE421C4543E8006B67AF /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
