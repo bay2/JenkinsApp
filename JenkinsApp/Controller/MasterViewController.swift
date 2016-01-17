@@ -11,6 +11,7 @@ import UIKit
 class MasterViewController: UIViewController {
     
     
+    var cellIndex = 0
     var jobData: LoginResponse?
 
     override func viewDidLoad() {

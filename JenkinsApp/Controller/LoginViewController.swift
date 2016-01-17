@@ -27,7 +27,6 @@ class LoginViewController: UIViewController {
     var notificationToken: NotificationToken?
     
     var serverManage = ServerDataManage()
-    var jenkinsReq = JenkinsNetRequest()
     var loginResponse: LoginResponse?
     
     var isExpand = false
@@ -43,14 +42,14 @@ class LoginViewController: UIViewController {
         
         if let serverData = serverManage.querySelectedServerInfo() {
             serverLab.text = serverData.serverName
-            jenkinsReq.serverAddr = serverData.serverAddr
+            jenkinsNetRequest.serverAddr = serverData.serverAddr
         }
         
         notificationToken = serverManage.realm.addNotificationBlock { (notification, realm) -> Void in
             self.serverTableView.reloadData()
         }
         
-        jenkinsReq.postNotification = jenkinsPostNoticication
+        jenkinsNetRequest.postNotification = jenkinsPostNoticication
         
     }
     
@@ -192,7 +191,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func onClickLogin(sender: UIButton) {
         
-        jenkinsReq.httpPost(.Login, para: ["user" : userNameText.text!, "pwd": pwdText.text!])
+        jenkinsNetRequest.httpPost(.Login, para: ["user" : userNameText.text!, "pwd": pwdText.text!])
         
         
     }

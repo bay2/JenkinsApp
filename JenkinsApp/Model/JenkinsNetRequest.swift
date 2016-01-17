@@ -11,7 +11,7 @@ import Alamofire
 import Log
 
 enum JenkinsMethod {
-    case Login
+    case Login, Build
 }
 
 enum JenkinsError: ErrorType {
@@ -20,9 +20,9 @@ enum JenkinsError: ErrorType {
     case NetApiError
 }
 
-class JenkinsNetRequest: NSObject {
-    
+var jenkinsNetRequest = JenkinsNetRequest()
 
+class JenkinsNetRequest: NSObject {
     
     typealias PostNotificationType = (JenkinsMethod, Result<AnyObject, JenkinsError>) -> Void
     
@@ -82,28 +82,31 @@ class JenkinsNetRequest: NSObject {
             })
             
         }
-//        
-//        Alamofire.request(.POST, serverNetAddr + "/j_acegi_security_check", parameters: ["j_username" : user, "j_password" : pwd, "from" : "/api/json?pretty=true"]).responseJSON { (response) -> Void in
-//            
-//            if response.result.isFailure {
-//                self.cellPostNotification(.Login, result: .Failure(.NetError))
-//                Log.error("Network Invalid")
-//                return
-//            }
-//            
-//            guard let loginResponse = response.result.value else {
-//                self.cellPostNotification(.Login, result: .Failure(.NetApiError))
-//                Log.error("Network Api Error")
-//                return
-//            }
-//            
-//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//                
-//                self.cellPostNotification(.Login, result: .Success(loginResponse))
-//                
-//            })
-//            
-//        }
+    }
+    
+    /**
+     启动编译
+     
+     - parameter jobName: 工程名称
+     */
+    func buildJob(jobName: String) {
+        
+        guard let serverNetAddr = serverAddr else {
+            Log.error("Server address is nil")
+            return
+        }
+        
+        let apiUrl = serverNetAddr + "/job/" + jobName + "/build"
+        
+        Alamofire.request(.POST, apiUrl).responseData { (response) -> Void in
+            if response.result.isFailure {
+                Log.error("Build failure")
+                return
+            }
+            
+            Log.info("Build Sussess")
+        }
+        
     }
     
     /*!
@@ -140,6 +143,9 @@ class JenkinsNetRequest: NSObject {
         case .Login:
             loginReq(para)
             
+        default:
+            Log.error("method error")
+
         }
         
     }

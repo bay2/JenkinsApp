@@ -66,7 +66,7 @@ extension LoginViewController {
         expandServerList()
         
         serverLab.text = serverManage.serverInfos[indexPath.row].serverName
-        jenkinsReq.serverAddr = serverManage.serverInfos[indexPath.row].serverAddr
+        jenkinsNetRequest.serverAddr = serverManage.serverInfos[indexPath.row].serverAddr
         
         serverManage.setSelectedServer(serverManage.serverInfos[indexPath.row])
 

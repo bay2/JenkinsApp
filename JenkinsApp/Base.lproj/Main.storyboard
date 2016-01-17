@@ -30,7 +30,7 @@
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5c-FH-4sK" userLabel="分割线">
                                         <rect key="frame" x="0.0" y="40" width="600" height="0.5"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.5" id="dcj-b2-cbp"/>
                                         </constraints>
@@ -45,7 +45,7 @@
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBr-uP-Np6" userLabel="分割线">
                                         <rect key="frame" x="0.0" y="80" width="600" height="0.5"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.29999999999999999" id="GQw-kf-fkD"/>
                                         </constraints>
@@ -78,7 +78,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lEm-5V-huQ" userLabel="分割线">
                                         <rect key="frame" x="0.0" y="121" width="600" height="0.5"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.29999999999999999" placeholder="YES" id="tbg-Rd-QFz"/>
                                         </constraints>
@@ -101,7 +101,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务器名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4la-oC-ihY">
                                                             <rect key="frame" x="272" y="13" width="56" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -223,15 +223,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Sg-zq-jrt">
-                                <rect key="frame" x="0.0" y="45" width="600" height="555"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Sg-zq-jrt">
+                                <rect key="frame" x="0.0" y="89" width="600" height="467"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JobTableViewCell" rowHeight="68" id="f7t-rh-75N" customClass="JobTableViewCell" customModule="JenkinsApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="JobTableViewCell" rowHeight="68" id="f7t-rh-75N" customClass="JobTableViewCell" customModule="JenkinsApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f7t-rh-75N" id="Ctt-EZ-8go">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="67.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCT-Ar-AKg">
@@ -250,6 +252,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7P-oP-LKy">
                                                     <rect key="frame" x="545" y="19" width="30" height="30"/>
                                                     <state key="normal" title="构建"/>
+                                                    <connections>
+                                                        <action selector="onClickBulid:" destination="f7t-rh-75N" eventType="touchUpInside" id="eXk-lH-QvY"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -263,6 +268,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="edgeView" destination="hCT-Ar-AKg" id="ddr-LV-MPR"/>
                                             <outlet property="jobNameLab" destination="Y6P-s6-d8X" id="kdW-2C-F4o"/>
                                         </connections>
                                     </tableViewCell>
@@ -272,19 +278,36 @@
                                     <outlet property="delegate" destination="KKs-vL-ioW" id="Yaa-RX-0A6"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gra-i2-gOb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="eIA-65-qfD"/>
+                                </constraints>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.21960784310000001" green="0.59999999999999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Jenkins" id="6bI-0e-fko"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="4Sg-zq-jrt" secondAttribute="trailing" id="Es1-Eo-IUs"/>
-                            <constraint firstItem="4Sg-zq-jrt" firstAttribute="top" secondItem="MOl-cV-2gR" secondAttribute="bottom" constant="25" id="XUn-5V-4Ih"/>
+                            <constraint firstItem="Gra-i2-gOb" firstAttribute="top" secondItem="2SG-Z8-lLK" secondAttribute="top" id="GLi-vf-JR9"/>
+                            <constraint firstItem="4Sg-zq-jrt" firstAttribute="top" secondItem="Gra-i2-gOb" secondAttribute="bottom" constant="25" id="RUC-de-ruh"/>
+                            <constraint firstAttribute="trailing" secondItem="Gra-i2-gOb" secondAttribute="trailing" id="bpz-SY-Vsm"/>
                             <constraint firstItem="aE9-Mg-86l" firstAttribute="top" secondItem="4Sg-zq-jrt" secondAttribute="bottom" id="h5x-Sh-D8N"/>
+                            <constraint firstItem="Gra-i2-gOb" firstAttribute="leading" secondItem="2SG-Z8-lLK" secondAttribute="leading" id="hOS-Ip-Isa"/>
                             <constraint firstItem="4Sg-zq-jrt" firstAttribute="leading" secondItem="2SG-Z8-lLK" secondAttribute="leading" id="u8b-dc-QxX"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rza-7t-vpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1083" y="349"/>
+            <point key="canvasLocation" x="1082" y="375"/>
         </scene>
     </scenes>
 </document>
