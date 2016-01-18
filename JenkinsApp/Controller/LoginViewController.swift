@@ -49,25 +49,6 @@ class LoginViewController: UIViewController {
             self.serverTableView.reloadData()
         }
         
-        jenkinsNetRequest.postNotification = jenkinsPostNoticication
-        
-    }
-    
-    func jenkinsPostNoticication(method: JenkinsMethod, result: Result<AnyObject, JenkinsError>) {
-        
-        if method != .Login {
-            return;
-        }
-        
-        if result.isFailure {
-            return;
-        }
-        
-        let masterVC  = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MasterViewController") as! MasterViewController
-        
-        masterVC.jobData = result.value as? LoginResponse
-        
-        self.presentVC(masterVC)
     }
     
     override func didReceiveMemoryWarning() {
@@ -191,8 +172,22 @@ class LoginViewController: UIViewController {
     
     @IBAction func onClickLogin(sender: UIButton) {
         
-        jenkinsNetRequest.httpPost(.Login, para: ["user" : userNameText.text!, "pwd": pwdText.text!])
+        let para = ["user" : userNameText.text!, "pwd": pwdText.text!]
         
+        
+        jenkinsNetRequest.httpPost(.Login, para: para) { (result) in
+            
+            if  result.isFailure {
+                return
+            }
+            
+            let masterVC  = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MasterViewController") as! MasterViewController
+            
+            masterVC.jobData = result.value! as LoginResponse
+            
+            self.presentVC(masterVC)
+            
+        }
         
     }
     /*
