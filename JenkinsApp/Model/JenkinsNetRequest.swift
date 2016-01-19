@@ -31,7 +31,7 @@ class JenkinsNetRequest: NSObject {
     
     - parameter para: user, pwd
     */
-    private func loginReq(para: [String: AnyObject], componentHandle: (Result<LoginResponse, JenkinsError> -> Void)) {
+    private func loginReq(para: [String: AnyObject], componentHandle: (Result<AnyObject, JenkinsError> -> Void)) {
         
         guard let user = para["user"] else {
             componentHandle(.Failure(.ParaInvalid))
@@ -84,10 +84,17 @@ class JenkinsNetRequest: NSObject {
      
      - parameter jobName: 工程名称
      */
-    func buildJob(jobName: String) {
+    private func buildJob(para: [String: AnyObject], componentHandle: (Result<AnyObject, JenkinsError> -> Void)) {
         
         guard let serverNetAddr = serverAddr else {
             Log.error("Server address is nil")
+            componentHandle(.Failure(.ParaInvalid))
+            return
+        }
+        
+        guard let jobName = para["jobName"] as? String else {
+            Log.error("Job name is nil")
+            componentHandle(.Failure(.ParaInvalid))
             return
         }
         
@@ -96,9 +103,11 @@ class JenkinsNetRequest: NSObject {
         Alamofire.request(.POST, apiUrl).responseData { (response) -> Void in
             if response.result.isFailure {
                 Log.error("Build failure")
+                componentHandle(.Failure(.ParaInvalid))
                 return
             }
             
+            componentHandle(.Success(""))
             Log.info("Build Sussess")
         }
         
@@ -112,15 +121,16 @@ class JenkinsNetRequest: NSObject {
     - parameter method: 操作方法
     - parameter para:   返回结果
     */
-    func httpPost(method: JenkinsMethod, para: [String: AnyObject], componentHandle: Result<LoginResponse, JenkinsError> -> Void) {
+    func httpPost(method: JenkinsMethod, para: [String: AnyObject], componentHandle: Result<AnyObject, JenkinsError> -> Void) {
         
         switch method {
             
         case .Login:
             loginReq(para, componentHandle: componentHandle)
             
-        default:
-            Log.error("method error")
+        case .Build:
+            buildJob(para, componentHandle: componentHandle)
+            
 
         }
         

@@ -183,7 +183,7 @@ class LoginViewController: UIViewController {
             
             let masterVC  = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MasterViewController") as! MasterViewController
             
-            masterVC.jobData = result.value! as LoginResponse
+            masterVC.jobData = result.value as? LoginResponse
             
             self.presentVC(masterVC)
             

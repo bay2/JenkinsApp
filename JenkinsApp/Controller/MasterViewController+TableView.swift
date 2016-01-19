@@ -42,8 +42,10 @@ extension MasterViewController : JobCellProtocol{
     
     func jobCellBulid(jobName: String) {
 
+        jenkinsNetRequest.httpPost(.Build, para: ["jobName" : jobName]) { (result) -> Void in
+            
+        }
         
-        jenkinsNetRequest.buildJob(jobName)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
