@@ -86,4 +86,19 @@ class ServerDataManage: NSObject {
         
         try! realm.commitWrite()
     }
+    
+    /**
+     删除服务信息
+     
+     - parameter serverInfo: 服务器信息
+     */
+    func deleteServerInfo(serverInfo: ServerData) {
+        
+        realm.beginWrite()
+        
+        realm.delete(serverInfo)
+        
+        try! realm.commitWrite()
+        
+    }
 }

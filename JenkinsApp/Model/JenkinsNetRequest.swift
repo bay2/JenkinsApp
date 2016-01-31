@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import Log
+import EZSwiftExtensions
 
 enum JenkinsMethod {
     case Login, Build
@@ -33,13 +34,13 @@ class JenkinsNetRequest: NSObject {
     */
     private func loginReq(para: [String: AnyObject], componentHandle: (Result<AnyObject, JenkinsError> -> Void)) {
         
-        guard let user = para["user"] else {
+        guard let user = para["user"] as? String else {
             componentHandle(.Failure(.ParaInvalid))
             Log.error("Para Invalid")
             return
         }
         
-        guard let pwd = para["pwd"] else {
+        guard let pwd = para["pwd"] as? String  else {
             componentHandle(.Failure(.ParaInvalid))
             Log.error("Para Invalid")
             return
@@ -57,7 +58,19 @@ class JenkinsNetRequest: NSObject {
             return
         }
         
-        Alamofire.request(.POST, serverNetAddr + "/j_acegi_security_check", parameters: ["j_username" : user, "j_password" : pwd, "from" : "/api/json?pretty=true"]).responseObject { (response: Response<LoginResponse, NSError>) -> Void in
+        var parameters: [String: String]? = nil
+        var serverRequestAddr = serverNetAddr
+        
+        if user != "" {
+            
+            parameters = ["from" : "/api/json?pretty=true", "j_username" : user, "j_password" : pwd]
+            serverRequestAddr += "/j_acegi_security_check"
+            
+        } else {
+            serverRequestAddr += "/api/json?pretty=true"
+        }
+        
+        Alamofire.request(.POST, serverRequestAddr, parameters: parameters).responseObject { (response: Response<LoginResponse, NSError>) -> Void in
             if response.result.isFailure {
                 componentHandle(.Failure(.NetError))
                 Log.error("Network Invalid")

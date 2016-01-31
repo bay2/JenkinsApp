@@ -13,7 +13,13 @@ import ObjectMapper
 /// job
 class JobResponse: Mappable {
     
-    var statColor: String?
+    var statColor: String? {
+        didSet {
+            if statColor == nil {
+                statColor = "aa"
+            }
+        }
+    }
     var name: String?
     var url: String?
     

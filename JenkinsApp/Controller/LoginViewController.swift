@@ -49,6 +49,16 @@ class LoginViewController: UIViewController {
             self.serverTableView.reloadData()
         }
         
+        let Defaults = NSUserDefaults.standardUserDefaults()
+        if let userName = Defaults["userName"] {
+            userNameText.text = userName as? String
+        }
+        
+        if let passwd = Defaults["passwd"] {
+            pwdText.text = passwd as? String
+        }
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -183,6 +193,12 @@ class LoginViewController: UIViewController {
             
             let masterVC  = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MasterViewController") as! MasterViewController
             
+            let Defaults = NSUserDefaults.standardUserDefaults()
+            // Get values from NSUserDefaults
+            Defaults["userName"] = self.userNameText.text
+            Defaults["passwd"] = self.pwdText.text
+            Defaults.synchronize()
+            
             masterVC.jobData = result.value as? LoginResponse
             
             self.presentVC(masterVC)
@@ -201,3 +217,4 @@ class LoginViewController: UIViewController {
     */
 
 }
+

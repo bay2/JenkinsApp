@@ -72,6 +72,24 @@ extension LoginViewController {
 
     }
     
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if editingStyle == .Delete {
+            
+            if let serverInfo: ServerData = serverManage.serverInfos[indexPath.row] {
+                
+                if serverLab.text == serverInfo.serverName {
+                    serverLab.text = ""
+                }
+                
+                serverManage.deleteServerInfo(serverInfo)
+                
+            }
+            
+            
+        }
+        
+    }
 }
 
 class ServerTableViewCell: UITableViewCell {
